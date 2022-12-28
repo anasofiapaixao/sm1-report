@@ -1,0 +1,291 @@
+<!-- really basic static kludge straight from some template for a presentation -->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>KELLY - Cronologia do Sinistro</title>
+</head>
+
+<body>
+<section class="intro">
+  <h1>KELLY - Cronologia do Sinistro</h1>
+</section>
+
+<section class="timeline">
+  <ol>
+    
+<li><div><time>1100</time>
+- piloto embarca para atravessar Canal de Kiel
+<br/>- capitão confirma todos os sistemas operacionais e sem falhas
+</li><li><div><time>1335</time>
+- alarme de incêndio dispara
+<br/>- propulsão perdida
+<br/>- piloto reporta incidente ao serviço de tráfego marítimo
+</li><li><div><time>1337</time>
+- gerador principal falha
+<br/>- bateria de emergência (mesmo local) falha
+<br/>- arranque do gerador de emergência falha
+<br/>- piloto usa VHF portátil
+</li><li><div><time>1340</time>
+- piloto recebe confirmação da equipa de socorro
+<br/>- direção perdida, navio desgovernado
+<br/>- ancoragem de emergência executada
+<br/>- VIKING ENERGY acorda receber feridos
+</li><li><div><time>1350</time>
+- capitão reporta <b>resgate do primeiro ferido</b>
+e continuação de combate ao incêndio
+(2o. eng., queimaduras graves, escapou sozinho)
+</li><li><div><time>1357</time>
+- piloto contacta MRCC Bremen
+</li><li><div><time>1409</time>
+- 2o. eng. é embarcado no VIKING ENERGY
+<br/>- equipa de combate a incêndio entra na casa da máquina
+</li><li><div><time>1412</time>
+- capitão reporta <b>resgate do segundo ferido</b>
+(motorman, esforços de ressuscitação imediatos)
+</li><li><div><time>1420</time>
+- capitão reporta extinção do incêndio, requer suporte
+de helicóptero e pede médico em Brünsbuttel
+<br/>- <b>resgate da vítima mortal</b> (segundo motorman, ressucitação falhou)
+</li><li><div><time>1435</time>
+- 2o. eng. é desembarcado do VIKING ENERGY e levado a Brünsbuttel
+</li><li><div><time>1450</time>
+- embarcação de resgate chega, com médico
+</li><li><div><time>1506</time>
+- médico confirma a morte do segundo motorman
+<br/>- brigadas de fogo embarcam
+</li><li><div><time>1510</time>
+- capitão reporta que incêncio foi na casa do separador
+<br/>- gerador de emergëncia arrancado
+</li><li><div><time>1544</time>
+- helicóptero da polícia chega
+<br/>- segundo ferido (motorman) içado e levado a Hamburg
+</li><li><div><time>1615</time>
+- polícia recolhe cadáver (segundo motorman)
+<br/>- chefe de máquinas inspeciona casa da máquina para fechar válvulas
+(com autorização, bombeiros e proteção)
+</li><li><div><time>1838</time>
+- chefe de máquinas vai à casa da máquina arrancar
+gerador principal (com polícia e bombeiros)
+</li><li><div><time>1900</time>
+- capitão confirma arranque do gerador principal
+<br/>- ferro de estibordo é então içado
+</li><li><div><time>2200</time>
+- KELLY atraca em Brünsbuttel</li>
+  </ol>
+</section>
+
+<style>
+
+
+
+body {
+  font: normal 16px/1.5 "Roboto", sans-serif;
+  background: #c0c0c0;
+  color: #333;
+  margin: 0;
+}
+
+b { color: #a00; }
+
+
+.intro {
+  background: #fff;
+  padding: .5rem 0;
+  height: 4rem;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  margin: 0;
+}
+
+
+
+.timeline {
+  height: calc(100vh - 7rem);
+  padding: 1rem;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.timeline ol {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px 0;
+  transition: all 1s;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 3px;
+  background: #fff;
+}
+
+
+.timeline ol li:not(:first-child) { margin-left: 14px; }
+
+.timeline ol li::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 100%;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #a00;
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: black;
+  background: white;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div { top: calc(100% + 16px); }
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline .arrows .arrow__prev { margin-right: 20px; }
+
+.timeline .disabled { opacity: .5; }
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+
+
+@media screen and (max-width: 599px) {
+.intro h1 { font-size: 2rem; }
+
+.timeline {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.timeline ol, .timeline ol li { width: auto; }
+
+.timeline ol {
+  padding: 0;
+  transform: none !important;
+}
+
+.timeline ol li {
+  display: block;
+  height: auto;
+  background: transparent;
+}
+
+.timeline ol li:first-child { margin-top: 25px; }
+
+.timeline ol li:not(:first-child) { margin-left: auto; }
+
+.timeline ol li div {
+  width: 94%;
+  height: auto !important;
+  margin: 0 auto 25px;
+}
+
+.timeline ol li div { position: static; }
+
+.timeline ol li:nth-child(odd) div { transform: none; }
+
+.timeline ol li:nth-child(odd) div::before,  .timeline ol li:nth-child(even) div::before {
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: none;
+  border-left: 1px solid white;
+  height: 25px;
+}
+
+.timeline ol li:last-child,  .timeline ol li:nth-last-child(2) div::before,  .timeline ol li:not(:last-child)::after,  .timeline .arrows { display: none; }
+}
+</style>
+
+
+<script>
+(function() {
+
+  document.addEventListener("wheel", event => document.querySelector(".timeline").scrollLeft += event.deltaY);
+  
+  document.addEventListener("keydown", event => {
+      if (!event.key.startsWith("Arrow")) {
+	    return;
+	  }
+	  direction = event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 1; 
+	  document.dispatchEvent(new WheelEvent("wheel", { deltaY: 100*direction }));
+  });
+
+
+})();
+</script>
+
+</body>
+</html>
